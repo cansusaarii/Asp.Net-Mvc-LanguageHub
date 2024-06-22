@@ -1,0 +1,7 @@
+﻿body {
+}
+
+resizable-image {
+    width: 50px; /* Görsel genişliği */
+    height: auto; /* Oranı koruyarak yüksekliği ayarlar */
+}

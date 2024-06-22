@@ -1,0 +1,23 @@
+﻿
+@model List<Product>
+@section Footer{
+    <div>
+        Only for Index footer
+    </div>
+}
+<div class="container-fluid bg-light py-5 mb-5 page-header">
+	<div class="container py-5">
+		<div class="row justify-content-center">
+			<div class="col-lg-10 text-center">
+				<h1 class="display-3 text-dark animated slideInDown">Courses</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row my-3">
+    @foreach(Product prd in Model)
+    {
+        <partial name="_ProductCard" model="@prd" />
+    }
+</div>

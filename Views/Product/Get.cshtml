@@ -1,0 +1,58 @@
+﻿
+@model Product
+<div class="container-fluid bg-light py-0 mb-5 page-header">
+	<div class="container py-0">
+		<div class="row justify-content-center">
+			<div class="col-lg-10 text-center">
+				<div class="position-relative h-100">
+					<p>
+						<strong>Your security is our priority—experience seamless and safe payments every time.</strong>
+					</p>				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<p>
+<div class="cart--title-section--S7XdX">
+	@* <h1 class="ud-heading-xxxl font-weight-bold">Shopping Cart</h1> *@
+	<h1 class="display-4 text-dark mb-5">Shopping Cart</h1>
+</div>
+	@* <div class="position-relative h-100">
+		<img class="position-absolute w-100 h-100" src="images/about.jpg" alt="" style="object-fit: cover;">
+	</div> *@
+<p>
+<div class="row">
+	<div class="col-md-8">
+		<h1 class="font-weight-bold">@Model.ProductName</h1>
+		<p><strong>Price:</strong> @Model.Price</p>
+		<p><strong>Description:</strong> @Model.Description</p>
+	</div>
+	<div class="col-md-4">
+		<h2>Payment Information</h2>
+		<form asp-action="Payment" asp-controller="Payment" method="post">
+			<div class="form-group">
+				<p><strong>Total Price:</strong> @Model.Price</p>
+				<label for="cardNumber">Discount Coupon</label>
+				<input type="text" class="form-control" id="cardNumber" name="cardNumber" />
+			</div>
+			<p>
+			<!-- Diğer ödeme bilgileri alanları -->
+			<button type="submit" class="btn btn-primary btn-block">Complete Payment</button>
+		</form>
+	</div>
+</div>
+
+<div class="btn-group">
+	<a class="btn btn-primary" asp-controller="Home" asp-action="Index">
+		<i class="fa-solid fa-house"></i>
+		Home</a>
+	<a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index">
+		<i class="fa-solid fa-list"></i>
+		Products</a>
+</div>
+
+
+
+
+

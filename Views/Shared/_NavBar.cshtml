@@ -1,0 +1,42 @@
+﻿
+
+
+<nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Global Language Hub
+            
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="nav-link active" aria-current="page" asp-controller="About" asp-action="Index">About</a>
+                    <a class="nav-link active" aria-current="page" asp-controller="Product" asp-action="Index">Courses</a>
+                    <a class="nav-link active" aria-current="page" asp-controller="Users" asp-action="Index">Users</a>
+                    <a class="nav-link active" aria-current="page" asp-controller="Account" asp-action="Profile">My Profile</a>
+                    <a class="nav-link active" aria-current="page" asp-controller="Account" asp-action="Logout">Logout</a>
+
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="nav-link active" aria-current="page" asp-controller="About" asp-action="Index">About</a>
+                    <a class="nav-link active" aria-current="page" asp-controller="Product" asp-action="Index">Courses</a>
+                    <a class="nav-link active" aria-current="page" asp-controller="Account" asp-action="Login">
+                        Login
+                        <i class="fa fa-arrow-right ms-3"></i>
+                    </a>
+                </div>
+            </div>
+        }
+
+    </div>
+</nav>

@@ -1,0 +1,29 @@
+﻿@model Product
+<div class="text-center my-5">
+    <h1 class="display-6">
+       @*  <i class="fa-solid text-white fa-right-to-bracket bg-secondary p-3 rounded-5"></i> *@
+        <i class="fa-solid fa-cart-shopping"></i>
+        <br />
+        Payment
+    </h1>
+</div>
+
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+        <h3>Payment Details</h3>
+        <form asp-action="Payment" method="post">
+            @* <input type="hidden" name="courseId" value="@Model.Id" /> *@
+            <div class="form-group">
+                 <label for="cardOwner"><strong>Card Owner</strong></label>
+                 <input type="text" class="form-control" id="cardOwner" name="cardOwner" required />
+            </div>
+            <div class="form-group">
+                 <label for="cardNumber"><strong>Card Number</strong></label>
+                 <input type="text" class="form-control" id="cardNumber" name="cardNumber" required />
+            </div>
+                <!-- Diğer ödeme bilgileri alanları -->
+            <button type="submit" class="btn btn-primary btn-block">Complete payment</button>
+        </form>
+	</div>
+</div>

@@ -1,0 +1,89 @@
+﻿@model EmptyCoreWebApplication.Models.SignInModel
+
+<div class="text-center my-5">
+	<h6 class="display-6">
+		<i class="fa-solid text-white fa-right-to-bracket bg-secondary p-3 rounded-5"></i>
+		<br />
+		Register
+	</h6>
+</div>
+
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+		<div>
+			<div class="text-danger" asp-validation-summary="All"></div>
+		</div>
+		<form method="post" asp-action="Register">
+			<div class="form-group my-3">
+				<label asp-for="Email"></label>
+				<input asp-for="Email" class="form-control" />
+				<span asp-validation-for="Email" class="text-danger"></span>
+			</div>
+			<div class="form-group my-3">
+				<label asp-for="FirstName"></label>
+				<input asp-for="FirstName" class="form-control" />
+			</div>
+			<div class="form-group my-3">
+				<label asp-for="LastName"> </label>
+				<input asp-for="LastName" class="form-control" />
+			</div>
+			<div class="form-group my-2">
+				<label asp-for="Grade"> </label>
+				<select asp-for="Grade" class="form-control">
+					<option value="4th Grade">4th Grade</option>
+					<option value="6th Grade">6th Grade</option>
+					<option value="8th Grade">8th Grade</option>
+					<option value="12th Grade">12th Grade</option>
+				</select>
+			</div>
+
+			<fieldset>
+				<p>
+				<legend>Select One Language Course</legend>
+				<p>
+					<input id="turkish" type="radio" asp-for="SelectedCourse" value="Turkish" checked />
+					<label> Turkish </label>
+				<p>
+				<p>
+					<input id="english" type="radio" asp-for="SelectedCourse" value="English" />
+					<label> English </label>
+				<p>
+				<p>
+					<input id="german" type="radio" asp-for="SelectedCourse" value="German" />
+					<label> German </label>
+				<p>
+				<p>
+					<input id="spanish" type="radio" asp-for="SelectedCourse" value="Spanish" />
+					<label> Spanish </label>
+				<p>
+				<p>
+					<input id="chinese" type="radio" asp-for="SelectedCourse" value="Chinese" />
+					<label> Chinese </label>
+				<p>
+			</fieldset>
+			<div>
+				<label asp-for="RoleId">Role</label>
+				<select asp-for="RoleId">
+					<option value="teacher">Teacher</option>
+					<option value="student">Student</option>
+				</select>
+				<span asp-validation-for="RoleId"></span>
+			</div>
+			<div class="form-group my-3">
+				<label asp-for="Password"></label>
+				<input type="password" asp-for="Password" class="form-control" />
+				<span asp-validation-for="Email" class="text-danger"></span>
+			</div>
+
+			<div class="form-group my-3 d-flex justify-content-center">
+				<button type="submit" class="btn btn-primary">
+					<i class="fa-solid fa-right-to-bracket"></i>
+					Register
+				</button>
+			</div>
+		</form>
+	</div>
+	<div class="col-md-3"></div>
+</div>
+
